@@ -4,10 +4,11 @@ const estilo = StyleSheet.create({
    
   container: {
     marginTop: 20,
-    backgroundColor: '#FFB6C1',
+    backgroundColor: '#333',
     width: '40%',
-    marginLeft: 100,
+    marginLeft: '6%',
     borderRadius: 30,
+    border: '4px solid white',
     height: 400,
     flexDirection: 'column',
     padding: 10,
@@ -15,13 +16,14 @@ const estilo = StyleSheet.create({
   
   card: {
     marginTop: 80,
+    marginBottom: 100,
     justifyContent:'space-between',
     flexDirection: 'row',
-    transition: 'background-color 0.3s ease',
   },
 
 
       texto: {
+        color: 'white',
         fontSize: 20,
         marginTop: 5,
         width: 500,
@@ -29,15 +31,16 @@ const estilo = StyleSheet.create({
       },
 
       imagem: {
-        width: 180,
-        height: 180,
+        width: 200,
+        height: 200,
         borderRadius: 15,
         marginRight: 10,
+        border: '4px solid white',
       },
       titulo: {
         fontSize: 30,
         fontWeight: 'bold',
-        color: 'black',
+        color: 'white',
         marginLeft: 5,
       },
 })

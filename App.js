@@ -1,18 +1,21 @@
 import React from "react";
 import { Text, StyleSheet, View, Image, FlatList } from "react-native";
-import  Header from "./componentes/header";
+import Header from "./componentes/header";
 import Card from "./componentes/card";
 import PRODUTOS from './data';
+import Footer from "./componentes/footer";
 
 export default function App() {
   return (
     <View style={estilo.container}>
 
-     <Header></Header>
-   <View style = {{width: '100%'}}>
+     <Header />
+     <Image style={{width: '90%', aspectRatio: 6, borderRadius: 15}} source={{uri: 'https://img.freepik.com/premium-vector/vector-red-fire-sparks-flying-up-burning-glowing-particles-flame-fire-with-sparks-isolated-black-transparent-background_221648-554.jpg'}}/>
+   <View style = {{flex: 1, width: '100%'}}>
      <FlatList
       data = {PRODUTOS}
       keyExtractor = {(item)=>item.id}
+      numColumns={2}
       renderItem = {({item}) => (
 
             <Card 
@@ -26,6 +29,7 @@ export default function App() {
       )}
      />
      </View>
+     <Footer />
     </View>
   );
 }
@@ -34,8 +38,9 @@ const estilo = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'black',
     borderColor: 'pink',
+    
   },
+  
 })
-
