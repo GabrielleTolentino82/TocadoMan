@@ -1,13 +1,16 @@
 import React from "react";
 import { Text, StyleSheet, View, Image } from "react-native";
 import estilo from "./style";
-import { Entypo } from '@expo/vector-icons';
+import { Entypo} from '@expo/vector-icons';
+import NavBar from "../navbar";
 
 
 export default function Header() {
     return(
      <>
+     <NavBar />
     <View style={estilo.header}> 
+
           <Image style={estilo.imagem} source={{uri: 'https://files.menudino.com/cardapios/59084/logo.png'}}/>
     <Text style={estilo.titulo}> TOCA DO MAM</Text>
       <View style={{display: 'inline-block'}}>

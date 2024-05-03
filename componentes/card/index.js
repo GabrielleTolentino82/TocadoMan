@@ -1,5 +1,4 @@
 import {Text, View, Image} from 'react-native'
-import Header from '../header';
 import estilo from './style';
 
 export default function Card({id,preco,titulo,imagem,descricao }){

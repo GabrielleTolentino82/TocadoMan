@@ -5,8 +5,7 @@ const estilo = StyleSheet.create({
   container: {
     marginTop: 20,
     backgroundColor: '#333',
-    width: '40%',
-    marginLeft: '6%',
+    width: '100%',
     borderRadius: 30,
     border: '4px solid white',
     height: 400,

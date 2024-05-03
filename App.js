@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, Image, FlatList } from "react-native";
+import { Text, StyleSheet, View, Image, FlatList, TouchableOpacity } from "react-native";
 import Header from "./componentes/header";
 import Card from "./componentes/card";
 import PRODUTOS from './data';
@@ -17,7 +17,7 @@ export default function App() {
       keyExtractor = {(item)=>item.id}
       numColumns={2}
       renderItem = {({item}) => (
-
+        <TouchableOpacity style={{margin: 20, marginLeft: '6%'}}>
             <Card 
             id = {item.id}
             imagem = {item.imagem}
@@ -26,6 +26,7 @@ export default function App() {
             preco = {item.preco}
             
             /> 
+       </TouchableOpacity>
       )}
      />
      </View>

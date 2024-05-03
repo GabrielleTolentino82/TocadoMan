@@ -5,12 +5,13 @@ const estilo = StyleSheet.create({
     header:{
          backgroundColor: 'black',
          width: '100%',
-         height: 350,
+         height: 'auto',
          display: 'flex',
          flexDirection: 'column',
          alignItems: 'center',
          
     },
+
     titulo: {
       color: 'white',
       fontSize: 35,

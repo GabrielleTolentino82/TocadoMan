@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, Image } from "react-native";
+import { Text, View, Image, TouchableOpacity } from "react-native";
 import estilo from "./style";
 import { Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
@@ -16,14 +16,24 @@ export default function Footer() {
             <View style={estilo.footerSectionsContainer}>
                 <View style={estilo.footerSection}>
                     <Text style={estilo.footerSectionTitle}>Ajuda</Text>
+                    <TouchableOpacity>
                     <Text style={estilo.footerLink}>Perguntas frequentes</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
                     <Text style={estilo.footerLink}>Política de privacidade</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
                     <Text style={estilo.footerLink}>Termos de serviço</Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={estilo.footerSection}>
                     <Text style={estilo.footerSectionTitle}>Pedidos</Text>
+                    <TouchableOpacity>
                     <Text style={estilo.footerLink}>Cardápio</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity>
                     <Text style={estilo.footerLink}>Fazer pedido online</Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={estilo.footerSection}>
                     <Text style={estilo.footerSectionTitle}>Contato</Text>
@@ -32,9 +42,15 @@ export default function Footer() {
                 </View>
                 <View style={estilo.footerSection}>
                     <Text style={estilo.footerSectionTitle}>Siga-nos</Text>
+                    <TouchableOpacity>
                     <AntDesign name="instagram" size={40} color="white" />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
                     <Entypo name="facebook" size={40} color="white" />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
                     <AntDesign name="twitter" size={40} color="white" />
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
