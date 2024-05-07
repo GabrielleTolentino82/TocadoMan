@@ -1,5 +1,5 @@
-let DATA =
-[
+let DATA = {
+  comidas: [
     {
       id: '01',
       titulo: 'Burguer',
@@ -56,6 +56,9 @@ let DATA =
         preco: '14,99',
         imagem: 'https://files.menudino.com/cardapios/59084/9.jpg',
       },
+    ],
+
+    bebidas:[
       {
         id: '09',
         titulo: 'Coca-Cola',
@@ -84,6 +87,7 @@ let DATA =
         preco: '5,00',
         imagem: 'https://files.menudino.com/cardapios/59084/14.jpg',
       },
-]
+    ],
+    }
 
 export default DATA
