@@ -1,7 +1,10 @@
 import {Text, View, Image} from 'react-native'
 import estilo from './style';
+import { useNavigation } from '@react-navigation/native'
 
 export default function Card({id,preco,titulo,imagem,descricao }){
+    
+    
     return(
         <View style={estilo.container}>
             <Text style = {{fontSize: 25, textAlign: 'right', color: 'white', fontWeight: 'bold'}}>{id}.</Text>
