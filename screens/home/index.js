@@ -18,15 +18,13 @@ export default function home() {
      <View style = {{flex: 1, width: '100%'}}>
 
      <View style={estilo.topLine}></View>
-     <View style={estilo.categoriaContainer}> 
-       <Text style={estilo.tituloCategoria}>Comidas</Text>
-       </View>
+  
        <FlatList
-         data={DATA.comidas}
+         data={DATA}
          keyExtractor={(item) => item.id}
          numColumns={2}
          renderItem={({ item }) => (
-           <TouchableOpacity style={{margin: 20, marginLeft: '6%'}} onPress = {()=>navigation.navigate('details')}>
+           <TouchableOpacity style={{margin: 20, marginLeft: '6%'}} onPress = {()=>navigation.navigate('details', {titulo:item.titulo, descricao:item.descricao, preco:item.preco, imagem:item.imagem})}>
              <Card 
                id={item.id}
                imagem={item.imagem}
@@ -37,26 +35,8 @@ export default function home() {
            </TouchableOpacity>
          )}
        />
-       <View style={estilo.topLine}></View> 
-       <View style={estilo.categoriaContainer}>
-       <Text style={estilo.tituloCategoria}>Bebidas</Text>
-       </View>
-       <FlatList
-         data={DATA.bebidas}
-         keyExtractor={(item) => item.id}
-         numColumns={2}
-         renderItem={({ item }) => (
-           <TouchableOpacity style={{margin: 20, marginLeft: '6%'}} onPress = {()=>navigation.navigate('details')}>
-             <Card 
-               id={item.id}
-               imagem={item.imagem}
-               titulo={item.titulo}
-               descricao={item.descricao}
-               preco={item.preco}
-             /> 
-           </TouchableOpacity>
-         )}
-       />
+       <View style={estilo.topLine}></View>
+
      </View>
      
      <Footer />
@@ -81,15 +61,7 @@ const estilo = StyleSheet.create({
     border: '4px solid white',
   },
 
-  tituloCategoria: {
-    textAlign: 'center',
-    color: 'white',
-    fontSize: 30,
-    fontWeight: 'bold',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    
-  },
+ 
 
   topLine: {
     marginTop: 10,
